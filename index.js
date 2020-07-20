@@ -84,6 +84,7 @@ const defaultResp = (req, res, next) => {
 }
 app.use(defaultResp);
 
-app.listen(1337, (req, res)=> {
+const PORT = process.env.PORT || 1337;
+app.listen(PORT, (req, res)=> {
     console.log('Server running!');
 });
